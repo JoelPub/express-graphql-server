@@ -1,16 +1,13 @@
-// [index.js] with server app export.
-
 const express = require("express");
 
-const port = process.env.PORT || 4000;
 const app = express();
 
-app.get('/hello-world', (request, response) => {
-  response.send('Hello World!');
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
 });
 
-app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`);
+app.listen(5000, () => {
+  console.log("Running on port 5000.");
 });
 
 // Export the Express API
